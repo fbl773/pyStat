@@ -19,16 +19,17 @@ class DataSet:
 		self.rows = raw_input("How Many Rows?: ")
 		self.cols = raw_input(" How Many Cols?: ")
 		self.numElem = int(self.rows) * int(self.cols)
+		inFile = open('./formated.txt')
 		
 		#create List
 		cap = self.numElem
 		print "Enter your Elements:"
 		while (cap > 0):
-			elem = raw_input()
+			elem = inFile.readline()
 			self.listOfElem.append(float(elem))
 			cap = int(cap) - 1
 			
-	
+		inFile.close()
 		return
 	
 	"""
